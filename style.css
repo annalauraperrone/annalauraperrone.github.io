@@ -39,12 +39,7 @@ p {
     background-color: #00c6ff;
     color: black;
 }
-body {
-    background-image: 
-        linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)),
-        url('https://images.unsplash.com/photo-1581091870627-3b7e6c5f1d65');
-    background-size: cover;
-}
+
 
 .contacts-box {
     background-color: rgba(255, 255, 255, 0.05);

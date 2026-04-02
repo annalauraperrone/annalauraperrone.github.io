@@ -56,4 +56,29 @@ p {
 .contacts-box a:hover {
     text-decoration: underline;
 }
+@media (max-width: 768px) {
+
+    .container {
+        margin-top: 30%;
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 2em;
+    }
+
+    p {
+        font-size: 1em;
+    }
+
+    .buttons {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .btn {
+        width: 80%;
+        margin: 0 auto;
+    }
+}
 

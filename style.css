@@ -136,3 +136,11 @@ p {
         padding: 15px;
     }
 }
+.profile-img {
+    width: 150px;       /* Larghezza della foto */
+    height: 150px;      /* Altezza della foto */
+    border-radius: 50%; /* La rende circolare */
+    object-fit: cover;  /* Evita che l'immagine si schiacci */
+    margin-bottom: 20px;
+    border: 3px solid #333; /* Opzionale: un piccolo bordo */
+}

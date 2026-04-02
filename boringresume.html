@@ -1,1 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume - Eng. Anna Laura Perrone</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Sovrascriviamo alcune regole per rendere il CV più simile a un documento */
+        .container-resume {
+            width: 95%;
+            max-width: 900px;
+            margin: 40px auto;
+            background: rgba(255, 255, 255, 0.02);
+            backdrop-filter: blur(15px);
+            border: 1px solid rgba(0, 198, 255, 0.2);
+            border-radius: 15px;
+            padding: 50px;
+            text-align: left; /* Allineamento professionale a sinistra */
+        }
 
+        .resume-header {
+            border-bottom: 2px solid #00c6ff;
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .resume-header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+            text-align: left;
+        }
+
+        .section-title {
+            color: #00c6ff;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            border-left: 4px solid #00c6ff;
+            padding-left: 15px;
+            margin: 40px 0 20px 0;
+            font-size: 1.4rem;
+        }
+
+        .job-title {
+            font-weight: bold;
+            font-size: 1.2rem;
+            color: #fff;
+        }
+
+        .company-date {
+            display: flex;
+            justify-content: space-between;
+            color: rgba(255, 255, 255, 0.6);
+            margin-bottom: 10px;
+            font-style: italic;
+        }
+
+        ul {
+            padding-left: 20px;
+            color: rgba(255, 255, 255, 0.8);
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        .download-nav {
+            position: sticky;
+            top: 0;
+            background: rgba(15, 32, 39, 0.9);
+            padding: 15px;
+            z-index: 1000;
+            display: flex;
+            justify-content: space-between;
+            border-bottom: 1px solid rgba(0, 198, 255, 0.3);
+        }
+
+        @media (max-width: 768px) {
+            .container-resume { padding: 25px; }
+            .resume-header { flex-direction: column; text-align: center; }
+            .company-date { flex-direction: column; }
+            .skills-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+<nav class="download-nav">
+    <a href="index.html" class="btn" style="padding: 8px 15px;">⬅ Home</a>
+    <a href="PERRONE_ENG.pdf" download="CV_Anna_Laura_Perrone" class="btn" style="padding: 8px 15px; background: #00c6ff; color: #000;">
+        📥 Download PDF
+    </a>
+</nav>
+
+<div class="container-resume">
+    <header class="resume-header">
+        <div>
+            <h1>Anna Laura Perrone [cite: 1]</h1>
+            <p style="font-size: 1.2rem; color: #00c6ff;">Mechanical Engineer | Program Manager [cite: 2]</p>
+        </div>
+    </header>
+
+    <p>[cite: 3, 4, 5] Qualified Mechanical Engineer with experience in automotive, defense, and oil & gas sectors. Proven track record in managing complex projects and strategic customers with a results-oriented approach.</p>
+
+    <h2 class="section-title">Work Experience</h2>
+    
+    <div>
+        <div class="job-title">PROGRAM MANAGER [cite: 20]</div>
+        <div class="company-date">
+            <span>Leonardo SpA - Fusaro, Bacoli [cite: 21]</span>
+            <span>Feb 2023 - Present [cite: 22]</span>
+        </div>
+        <ul>
+            <li>Management of complex defense programs (planning, budgeting, technical deliverables)[cite: 23].</li>
+            <li>Oversight of investment plans and cross-functional team leadership[cite: 25].</li>
+            <li>Advanced use of WBS, EVMS, and SAP for project risk management[cite: 26].</li>
+        </ul>
+    </div>
+
+    <div>
+        <div class="job-title">ACCOUNT MANAGER [cite: 27]</div>
+        <div class="company-date">
+            <span>Shell Italia Oil and Products Srl [cite: 29]</span>
+            <span>May 2022 - Jan 2023 [cite: 28]</span>
+        </div>
+        <ul>
+            <li>Managed commercial relationships in the lubricants sector for Automotive[cite: 30].</li>
+            <li>Defined customized sales strategies and technical support via CRM[cite: 32].</li>
+        </ul>
+    </div>
+
+    <h2 class="section-title">Education</h2>
+    
+    <div>
+        <div class="job-title">Master's Degree in Mechanical Engineering [cite: 55]</div>
+        <div class="company-date">
+            <span>University of Naples Federico II [cite: 56]</span>
+            <span>Graduated June 2022 [cite: 56]</span>
+        </div>
+        <p><strong>110/110 cum laude [cite: 57]</strong>. Thesis on Fluidized Bed Machining applied to Additive Manufacturing[cite: 57].</p>
+    </div>
+
+    <h2 class="section-title">Skills & Awards</h2>
+    <div class="skills-grid">
+        <div>
+            <strong>Hard Skills[cite: 16]:</strong><br>
+            SAP, SolidWorks, MATLAB, Python, C++, SQL, LaTeX, Microsoft Project, WBS/EVMS.
+        </div>
+        <div>
+            <strong>Awards[cite: 46, 47]:</strong><br>
+            Carabinieri Award for Master's Degree (110/110 cum laude).<br>
+            3rd Place - Women's Shooting Category (2021)[cite: 48].
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

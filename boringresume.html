@@ -6,7 +6,7 @@
     <title>Resume - Eng. Anna Laura Perrone</title>
     <link rel="stylesheet" href="style.css">
     <style>
-        /* Sovrascriviamo alcune regole per rendere il CV più simile a un documento */
+        /* Struttura del contenitore CV */
         .container-resume {
             width: 95%;
             max-width: 900px;
@@ -23,9 +23,6 @@
             border-bottom: 2px solid #00c6ff;
             padding-bottom: 20px;
             margin-bottom: 30px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
         }
 
         .resume-header h1 {
@@ -73,19 +70,7 @@
             gap: 20px;
         }
 
-        /* Navigazione Superiore */
-        .download-nav {
-            position: sticky;
-            top: 0;
-            background: rgba(15, 32, 39, 0.95);
-            padding: 15px;
-            z-index: 1000;
-            display: flex;
-            justify-content: space-between;
-            border-bottom: 1px solid rgba(0, 198, 255, 0.3);
-        }
-
-        /* Sezione Azioni Finali */
+        /* Sezione Azioni Finali (Unici tasti presenti) */
         .resume-footer-actions {
             margin-top: 50px;
             text-align: center;
@@ -98,7 +83,7 @@
             margin-top: 20px;
         }
 
-        /* Stile specifico per evidenziare il Download */
+        /* Stile evidenziato per il Download */
         .btn-highlight {
             background: #00c6ff !important;
             color: #0f2027 !important;
@@ -108,11 +93,12 @@
         .btn-highlight:hover {
             background: transparent !important;
             color: #00c6ff !important;
+            box-shadow: 0 0 15px rgba(0, 198, 255, 0.4);
         }
 
+        /* Responsive per Mobile */
         @media (max-width: 768px) {
             .container-resume { padding: 25px; }
-            .resume-header { flex-direction: column; text-align: center; }
             .company-date { flex-direction: column; }
             .skills-grid { grid-template-columns: 1fr; }
             .buttons-row { flex-direction: column; }
@@ -122,19 +108,10 @@
 </head>
 <body>
 
-<nav class="download-nav">
-    <a href="index.html" class="btn" style="padding: 8px 15px;">⬅ Home</a>
-    <a href="PERRONE_ENG.pdf" download="CV_Anna_Laura_Perrone" class="btn btn-highlight" style="padding: 8px 15px;">
-        📥 Download PDF
-    </a>
-</nav>
-
 <div class="container-resume">
     <header class="resume-header">
-        <div>
-            <h1>Anna Laura Perrone</h1>
-            <p style="font-size: 1.2rem; color: #00c6ff;">Mechanical Engineer | Program Manager</p>
-        </div>
+        <h1>Anna Laura Perrone</h1>
+        <p style="font-size: 1.2rem; color: #00c6ff;">Mechanical Engineer | Program Manager</p>
     </header>
 
     <p>Qualified Mechanical Engineer with experience in automotive, defense, and oil & gas sectors. Proven track record in managing complex projects and strategic customers with a results-oriented approach.</p>

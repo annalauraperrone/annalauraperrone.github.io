@@ -143,4 +143,5 @@ p {
     object-fit: cover;  /* Evita che l'immagine si schiacci */
     margin-bottom: 20px;
     border: 3px solid #333; /* Opzionale: un piccolo bordo */
+    box-shadow: 0 0 20px rgba(0, 198, 255, 0.3); /* Aggiunto un leggero bagliore */
 }

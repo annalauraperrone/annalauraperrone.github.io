@@ -137,8 +137,8 @@ p {
     }
 }
 .profile-img {
-    width: 180px;       /* Larghezza della foto */
-    height: 180px;      /* Altezza della foto */
+    width: 200px;       /* Larghezza della foto */
+    height: 200px;      /* Altezza della foto */
     border-radius: 50%; /* La rende circolare */
     object-fit: cover;  /* Evita che l'immagine si schiacci */
     margin-bottom: 20px;

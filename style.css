@@ -79,34 +79,37 @@ p {
 }
 
 /* Box Contatti */
-.contacts-box {
-    background-color: rgba(0, 198, 255, 0.07);
-    padding: 25px;
-    border-radius: 12px;
-    border-left: 4px solid #00c6ff;
-    display: block; /* Meglio block per gestire i margini */
-    max-width: 450px;
-    margin: 0 auto;
-    text-align: left; /* Allineamento tecnico */
-}
-
+/* Stile per i paragrafi dentro il box contatti */
 .contacts-box p {
-    margin: 10px 0;
-    font-size: 1rem;
-    word-break: break-all; /* Impedisce che la mail rompa il layout su schermi piccoli */
+    margin: 25px 0; /* Aumenta lo spazio tra un contatto e l'altro */
+    font-size: 1rem; /* Dimensione dell'etichetta (Phone, Email, ecc.) */
+    color: rgba(255, 255, 255, 0.7); /* Colore leggermente più tenue per l'etichetta */
 }
 
-.contacts-box a {
-    color: #00c6ff;
+/* Stile specifico per i link di contatto (Email, Telefono, LinkedIn) */
+.contact-link {
+    display: inline-block;
+    font-size: 1.4rem; /* Dimensione aumentata */
+    font-weight: bold;
+    color: #00c6ff !important; /* Colore azzurro tecnico */
     text-decoration: none;
-    transition: 0.2s;
+    margin-top: 8px;
+    transition: all 0.3s ease;
+    word-break: break-all; /* Fondamentale per non far uscire la mail dallo schermo su mobile */
 }
 
-.contacts-box a:hover {
-    filter: brightness(1.2);
-    text-decoration: underline;
+.contact-link:hover {
+    filter: brightness(1.3);
+    text-shadow: 0 0 10px rgba(0, 198, 255, 0.5);
+    transform: scale(1.02); /* Leggero effetto ingrandimento al passaggio */
 }
 
+/* Ottimizzazione per schermi piccoli (Mobile) */
+@media (max-width: 600px) {
+    .contact-link {
+        font-size: 1.2rem; /* Leggermente più piccolo su smartphone per stare in riga */
+    }
+}
 /* Media Query migliorata per Mobile */
 @media (max-width: 600px) {
     body {

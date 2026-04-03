@@ -1,1 +1,250 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Chaos Coordinator - Anna Laura Perrone</title>
+    <style>
+        /* Struttura del contenitore CV */
+        body {
+            background-color: #0f2027;
+            color: white;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+        }
+
+        .container-resume {
+            width: 95%;
+            max-width: 900px;
+            margin: 40px auto;
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(15px);
+            border: 2px solid rgba(0, 198, 255, 0.3);
+            border-radius: 20px;
+            padding: 50px;
+            text-align: left;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        }
+
+        .resume-header {
+            border-bottom: 3px solid #00c6ff;
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+        }
+
+        .resume-header h1 {
+            margin: 0;
+            font-size: 3rem;
+            background: linear-gradient(to right, #00c6ff, #0072ff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-transform: uppercase;
+        }
+
+        .tagline {
+            font-size: 1.3rem;
+            color: #00c6ff;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+
+        .section-title {
+            color: #00c6ff;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            border-left: 5px solid #ff4b2b; /* Un tocco di rosso per l'occasional firefighter */
+            padding-left: 15px;
+            margin: 40px 0 20px 0;
+            font-size: 1.6rem;
+        }
+
+        .job-title {
+            font-weight: bold;
+            font-size: 1.3rem;
+            color: #fff;
+            display: flex;
+            align-items: center;
+        }
+
+        .company-date {
+            display: flex;
+            justify-content: space-between;
+            color: rgba(255, 255, 255, 0.6);
+            margin-bottom: 10px;
+            font-style: italic;
+            border-bottom: 1px dotted rgba(255,255,255,0.2);
+        }
+
+        ul {
+            padding-left: 20px;
+            color: rgba(255, 255, 255, 0.9);
+            list-style-type: "⚡ ";
+        }
+
+        li {
+            margin-bottom: 10px;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 25px;
+            background: rgba(0, 198, 255, 0.1);
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        .skill-box strong {
+            color: #00c6ff;
+            display: block;
+            margin-bottom: 5px;
+            text-transform: uppercase;
+        }
+
+        .badge {
+            background: #00c6ff;
+            color: #0f2027;
+            padding: 2px 8px;
+            border-radius: 5px;
+            font-size: 0.8rem;
+            font-weight: bold;
+            margin-left: 10px;
+        }
+
+        .resume-footer-actions {
+            margin-top: 50px;
+            text-align: center;
+        }
+
+        .btn {
+            text-decoration: none;
+            padding: 12px 30px;
+            border-radius: 30px;
+            font-weight: bold;
+            transition: 0.3s;
+            display: inline-block;
+            border: 2px solid #00c6ff;
+            color: #00c6ff;
+        }
+
+        .btn:hover {
+            background: #00c6ff;
+            color: #0f2027;
+            box-shadow: 0 0 20px rgba(0, 198, 255, 0.6);
+        }
+
+        .quote {
+            font-style: italic;
+            color: rgba(255,255,255,0.5);
+            text-align: center;
+            margin-top: 30px;
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 768px) {
+            .container-resume { padding: 25px; }
+            .company-date { flex-direction: column; }
+            .skills-grid { grid-template-columns: 1fr; }
+            .resume-header h1 { font-size: 2rem; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container-resume">
+    <header class="resume-header">
+        <h1>Anna Laura Perrone</h1>
+        <p class="tagline">Mechanical Engineer | Program Manager | Occasional Firefighter 🚒</p>
+        <p style="color: rgba(255,255,255,0.7); font-size: 1rem;">
+            📍 Naples, Italy | 📧 annalauraperrone@gmail.com | 📱 +39 320 318 5533
+        </p>
+    </header>
+
+    <div style="background: rgba(255,255,255,0.05); padding: 20px; border-radius: 10px; border-left: 4px solid #00c6ff;">
+        <h2 style="margin-top:0; color:#00c6ff;">Summary</h2>
+        <p>Engineer who accidentally became very good at managing <strong>chaos, budgets, and humans</strong>. Experienced in defense, oil & gas, automotive, and basically any environment where things can go wrong in interesting and expensive ways. Known for solving problems before coffee—and creating PowerPoints after. ☕️📊</p>
+    </div>
+
+    <h2 class="section-title">Professional Experience</h2>
+    
+    <div>
+        <div class="job-title">Program Manager <span class="badge">Survival Mode Expert</span></div>
+        <div class="company-date">
+            <span>Leonardo</span>
+            <span>Present</span>
+        </div>
+        <ul>
+            <li>Managed complex defense programs and survived.</li>
+            <li>Balanced budgets, timelines, and stakeholder expectations (not always in that order).</li>
+            <li>Fluent in acronyms: WBS, EVMS, SAP, and "ASAP".</li>
+        </ul>
+    </div>
+
+    <br>
+
+    <div>
+        <div class="job-title">Account Manager <span class="badge">Emotional Support Engineer</span></div>
+        <div class="company-date">
+            <span>Shell</span>
+            <span>2022 - 2023</span>
+        </div>
+        <ul>
+            <li>Sold lubricants and occasionally emotional reassurance to clients.</li>
+            <li>Built relationships strong enough to survive pricing discussions.</li>
+            <li>Turned "maybe" into "yes" and "no" into "let's talk again next quarter".</li>
+        </ul>
+    </div>
+
+    <h2 class="section-title">Education</h2>
+    
+    <div>
+        <div class="job-title">Master's Degree in Mechanical Engineering</div>
+        <div class="company-date">
+            <span>University of Naples Federico II</span>
+            <span>110/110 cum laude</span>
+        </div>
+        <p>Yes, I studied a lot. (Licensed Engineer: fully authorized to overthink professionally). 🎓</p>
+    </div>
+
+    <div>
+        <div class="job-title">PM Academy</div>
+        <div class="company-date">
+            <span>Leonardo / Luiss</span>
+        </div>
+        <p>Learned how to plan things that will inevitably change. 📝</p>
+    </div>
+
+    <h2 class="section-title">Superpowers & Skills</h2>
+    <div class="skills-grid">
+        <div class="skill-box">
+            <strong>Technical (Tools I pretend to master):</strong>
+            SAP, MATLAB, Python, SolidWorks, Ansys, and the mysterious art of Excel.
+        </div>
+        <div class="skill-box">
+            <strong>Soft (Human Interface):</strong>
+            Problem solving, leadership, and explaining technical things to non-technical people without crying. 😭🚫
+        </div>
+        <div class="skill-box">
+            <strong>Languages:</strong>
+            English (C1): Professional & Sarcastic. <br>
+            Spanish (C1): Professional & Slightly more dramatic.
+        </div>
+        <div class="skill-box">
+            <strong>Additional Features:</strong>
+            Athlete (shooting 🎯), reader, part-time philosopher, and professional "it depends" sayer.
+        </div>
+    </div>
+
+    <div class="resume-footer-actions">
+        <hr style="border: 0; border-top: 1px solid rgba(0, 198, 255, 0.2); margin-bottom: 30px;">
+        <p style="font-weight: bold; color: #00c6ff;">Can manage stress and Excel spreadsheets simultaneously. 📈</p>
+        <div class="buttons-row">
+            <a href="index.html" class="btn">⬅ Back to the Boring Reality</a>
+        </div>
+        <p class="quote">References available upon request (and emotional readiness). [cite: 29]</p>
+    </div>
+</div>
+
+</body>
+</html>

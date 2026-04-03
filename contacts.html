@@ -5,6 +5,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contacts - Eng. Anna Laura Perrone</title>
     <link rel="stylesheet" href="style.css?v=1.1">
+    <style>
+        /* Stile aggiuntivo per il tasto vCard */
+        .vcard-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            background: linear-gradient(135deg, #00c6ff, #0072ff);
+            color: white;
+            padding: 15px 25px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            margin-top: 20px;
+            transition: transform 0.3s, box-shadow 0.3s;
+            border: none;
+            cursor: pointer;
+            font-family: inherit;
+            font-size: 1rem;
+        }
+
+        .vcard-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0, 198, 255, 0.4);
+        }
+
+        .vcard-btn:active {
+            transform: translateY(0);
+        }
+    </style>
 </head>
 <body>
 
@@ -31,9 +61,43 @@
         </div>
     </div>
 
-    <br>
+    <button onclick="downloadVCard()" class="vcard-btn">
+        📥 Save Contact to Phone
+    </button>
+
+    <br><br>
     <a href="index.html" class="btn">⬅ Back</a>
 </div>
+
+<script>
+function downloadVCard() {
+    // Dati per la vCard [cite: 1, 2]
+    const vcardData = [
+        "BEGIN:VCARD",
+        "VERSION:3.0",
+        "FN:Anna Laura Perrone",
+        "ORG:Mechanical Engineer",
+        "TITLE:Program Manager",
+        "TEL;TYPE=CELL,VOICE:+393203185533",
+        "EMAIL;TYPE=PREF,INTERNET:annalauraperrone@gmail.com",
+        "URL:https://www.linkedin.com/in/anna-laura-perrone-",
+        "END:VCARD"
+    ].join("\n");
+
+    // Creazione del file Blob
+    const blob = new Blob([vcardData], { type: "text/vcard" });
+    const url = window.URL.createObjectURL(blob);
+    
+    // Creazione link temporaneo per il download
+    const newLink = document.createElement("a");
+    newLink.download = "Anna_Laura_Perrone.vcf";
+    newLink.href = url;
+    newLink.click();
+    
+    // Pulizia
+    window.URL.revokeObjectURL(url);
+}
+</script>
 
 </body>
 </html>
